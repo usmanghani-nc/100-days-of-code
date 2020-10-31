@@ -1,0 +1,12 @@
+{
+  "name": "usman",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/usmanGhani16/100-days-of-code.git",
+  "author": "usmanGhani16 <afro123737@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "git": "git add . && git commit -m",
+    "postgit" : "git push --all"
+  }
+}
