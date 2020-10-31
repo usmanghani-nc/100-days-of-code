@@ -7,6 +7,6 @@
   "license": "MIT",
   "scripts": {
     "git": "git add . && git commit -m",
-    "postgit" : "git push --all"
+    "gitpush" : "git push --all"
   }
 }

@@ -1,11 +1,176 @@
+<!-- Basic HTML and HTML5: Declare the Doctype of an HTML Document -->
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Basic HTML and HTML5: Define the Head and Body of an HTML Document -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <h1>hallo worlld</h1>
+    <!-- Commmnets -->
+    <h1>Hello World</h1>
+
+    <h2>CatPhotoApp</h2>
+
+    <p>
+      Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles
+      chase the red dot, hairball run catnip eat the grass sniff.
+    </p>
+
+    <!-- HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video,
+    article, section and others. -->
+
+    <h2>CatPhotoApp</h2>
+    <main>
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back." />
+
+      <p>
+        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles
+        chase the red dot, hairball run catnip eat the grass sniff.
+      </p>
+      <p>
+        Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch
+        sleep in the sink fluffy fur catnip scratched.
+      </p>
+    </main>
+
+    <!-- Basic HTML and HTML5: Link to External Pages with Anchor Elements -->
+    <a href="https://freecatphotoapp.com">cat photos</a>
+
+    <!-- Basic HTML and HTML5: Link to Internal Sections of a Page with Anchor Elements -->
+    <h2>CatPhotoApp</h2>
+    <main>
+      <a href="#footer">Jump to Bottom</a>
+
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back." />
+
+      <p>
+        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles
+        chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the
+        couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip
+        scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack
+        your ankles chase the red dot, hairball run catnip eat the grass sniff.
+      </p>
+      <p>
+        Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch
+        sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere
+        shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the
+        grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip
+        the couch sleep in the sink fluffy fur catnip scratched.
+      </p>
+      <p>
+        Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner,
+        destroy all furniture, especially couch or lay on arms while you're using the keyboard.
+        Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in
+        doorway. Man running from cops stops to pet cats, goes to jail.
+      </p>
+      <p>
+        Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse.
+        Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let
+        out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr
+        for no reason. Meow to be let out play time intently sniff hand run outside as soon as door
+        open yet destroy couch.
+      </p>
+    </main>
+
+    <footer id="footer">Copyright Cat Photo App</footer>
+
+    <!-- Basic HTML and HTML5: Nest an Anchor Element within a Paragraph -->
+    <h2>CatPhotoApp</h2>
+    <main>
+      <p>
+        <a href="https://freecatphotoapp.com" target="_blank">cat photos </a>
+      </p>
+
+      <p>cat photos View more <a href="https://freecatphotoapp.com">cat photos</a></p>
+
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back." />
+
+      <p>
+        Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles
+        chase the red dot, hairball run catnip eat the grass sniff.
+      </p>
+      <p>
+        Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch
+        sleep in the sink fluffy fur catnip scratched.
+      </p>
+    </main>
+
+    <!-- Basic HTML and HTML5: Make Dead Links Using the Hash Symbol -->
+    <p>Click here to view more <a href="#" target="_blank">cat photos</a>.</p>
+
+    <!-- Basic HTML and HTML5: Turn an Image into a Link -->
+    <a href="#">
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back." />
+    </a>
+
+    <!-- Basic HTML and HTML5: Nest Many Elements within a Single div Element -->
+    <div>
+      <!-- Basic HTML and HTML5: Create a Bulleted Unordered List -->
+      <ul>
+        <li>cats love</li>
+        <li>at the</li>
+        <li>bottom of the page.</li>
+      </ul>
+
+      <!-- Basic HTML and HTML5: Create an Ordered List -->
+      <ol>
+        <li>cat not love</li>
+        <li>grass</li>
+        <li>lasagna</li>
+      </ol>
+    </div>
+
+    <!-- Basic HTML and HTML5: Create a Text Field  -->
+    <input type="text" />
+
+    <!-- Basic HTML and HTML5: Add Placeholder Text to a Text Field -->
+    <input type="text" placeholder="cat photo URL" />
+
+    <!-- Basic HTML and HTML5: Create a Form Element -->
+    <form action="https://freecatphotoapp.com/submit-cat-photo">
+      <input type="text" placeholder="cat photo URL" />
+
+      <!-- Basic HTML and HTML5: Use HTML5 to Require a Field -->
+      <input type="text" placeholder="cat photo URL" required />
+
+      <!-- Basic HTML and HTML5: Create a Set of Radio Buttons -->
+
+      <label for="indoor"> <input id="indoor" type="radio" name="indoor-outdoor" />Indoor </label>
+
+      <label for="outdoor">
+        <input id="outdoor" type="radio" name="indoor-outdoor" />outdoor
+      </label>
+
+      <!-- Basic HTML and HTML5: Create a Set of Checkboxes -->
+      <label for="loving"><input id="loving" type="checkbox" name="personality" /> Loving</label>
+
+      <label for="loving"><input id="loving" type="checkbox" name="personality" /> Loving</label>
+
+      <label for="loving"><input id="loving" type="checkbox" name="personality" /> Loving</label>
+
+      <!-- Basic HTML and HTML5: Use the value attribute with Radio Buttons and Checkboxes -->
+      <label for="loving"
+        ><input id="loving" type="checkbox" name="personality" value="" /> Loving</label
+      >
+
+      <label for="loving"
+        ><input id="loving" type="checkbox" name="personality" value="energetic" /> energetic</label
+      >
+
+      <label for="loving"
+        ><input id="loving" type="checkbox" name="personality" value="Loving" /> Loving</label
+      >
+
+      <!-- Basic HTML and HTML5: Check Radio Buttons and Checkboxes by Default -->
+      <label for="loving"
+        ><input id="loving" type="checkbox" name="personality" value="loving" checked />
+        Loving</label
+      >
+
+      <!-- Basic HTML and HTML5: Add a Submit Button to a Form -->
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
