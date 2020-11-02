@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: coral;
+        color: green;
+        font-family: monospace;
+      }
+      .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+      }
+
+      .box {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 5px;
+        text-align: center;
+      }
+
+      .yellow-box {
+        background-color: yellow;
+        padding: 10px;
+      }
+
+      .red-box {
+        background-color: crimson;
+        color: #fff;
+        padding: 1.5em;
+      }
+
+      .blue-box {
+        background-color: blue !important;
+        color: #fff;
+        /* padding-top: 40px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px; */
+        /* short hand */
+        padding: 40px 20px 20px 40px;
+
+        /* short hand */
+        /* margin-top: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px; */
+
+        margin: 40px 20px 20px 40px;
+      }
+
+      [type='checkbox'] {
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+
+      #orange-text {
+        color: rgb(1, 5, 33);
+      }
+    </style>
+
+    <h1 style="color: white" id="orange-text">dada</h1>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+      <h5 class="box red-box">padding</h5>
+      <h5 class="box blue-box">padding</h5>
+    </div>
+  </body>
+</html>
