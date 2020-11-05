@@ -6,7 +6,7 @@
   "author": "usmanGhani16 <afro123737@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "git": "git add . && git commit -m",
-    "gitpush" : "git push --all"
+    "push": "git add . && git commit -m",
+    "postPush" : "git push --all"
   }
 }

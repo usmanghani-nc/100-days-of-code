@@ -13,6 +13,8 @@
       }
       .d3 {
         background: PaleTurquoise;
+        justify-self: center;
+        align-self: end;
       }
       .d4 {
         background: LightPink;
@@ -21,6 +23,7 @@
         background: PaleGreen;
         grid-column: 2 / 4;
         grid-row: 2 /4;
+        grid-area: footer;
       }
 
       .container {
@@ -28,12 +31,21 @@
         width: 100%;
         background: LightGray;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-rows: repeat(auto-fit, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-rows: 1fr 1fr 1fr; */
         /* grid-column-gap: 20px;
         grid-row-gap:5px; */
         /* first on row second one in column */
         grid-gap: 10px 20px;
+        justify-items: center;
+        align-items: end;
+        grid-template-areas:
+          'header header header'
+          '. content content'
+          'footer footer footer';
       }
     </style>
   </head>
