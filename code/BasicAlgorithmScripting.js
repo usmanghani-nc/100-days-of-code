@@ -82,11 +82,135 @@ function largestOfFour(arr) {
   return res;
 }
 
-console.log(
-  largestOfFour([
-    [4, 5, 1, 3],
-    [13, 27, 18, 26],
-    [32, 35, 37, 39],
-    [-1000, -1001, -857, -1],
-  ]),
-);
+// console.log(
+//   largestOfFour([
+//     [4, 5, 1, 3],
+//     [13, 27, 18, 26],
+//     [32, 35, 37, 39],
+//     [-1000, -1001, -857, -1],
+//   ]),
+// );
+
+// Basic Algorithm Scripting: Confirm the Ending
+
+function confirmEnding(str, target) {
+  if (!str || !target) return;
+
+  const tarArr = str.split(' ');
+
+  const el = tarArr[tarArr.length - 1];
+
+  const found = el.substring(el.length - target.length);
+
+  return found === target ? true : false;
+}
+
+// console.log(confirmEnding('Open sesamet', 'samet'));
+
+// Basic Algorithm Scripting: Repeat a String Repeat a String
+
+function repeatStringNumTimes(str, num) {
+  let strRes = '';
+  if (num > 0) {
+    for (let i = 1; i <= num; i++) {
+      strRes = strRes + str;
+    }
+  } else {
+    return strRes;
+  }
+
+  return strRes;
+}
+
+// console.log(repeatStringNumTimes('abc', 3));
+
+// Basic Algorithm Scripting: Truncate a String
+
+function truncateString(str, num) {
+  if (str.length > num) {
+    const splStr = str.split('');
+    return `${splStr.splice(0, num).join('')}...`;
+  }
+
+  return str;
+}
+// console.log(truncateString('Peter Piper picked a peck of pickled peppers', 11));
+
+function findElement(arr, func) {
+  let num = 0;
+
+  for (const iterator of arr) {
+    if (func(iterator)) {
+      num = iterator;
+      break;
+    } else {
+      num = undefined;
+    }
+  }
+
+  return num;
+}
+
+// console.log(findElement([1, 2, 3, 4, 6, 7, 9, 10], (num) => num % 2 === 0));
+
+// Basic Algorithm Scripting: Boo who
+
+function booWho(bool) {
+  return typeof bool === 'boolean' ? true : false;
+}
+
+// console.log(booWho(null));
+
+// Basic Algorithm Scripting: Title Case a Sentence
+
+function titleCase(str) {
+  if (!str) return;
+  const res = [];
+
+  const strArr = str.split(' ');
+
+  for (const iterator of strArr) {
+    res.push(`${iterator[0].toUpperCase()}${iterator.slice(1, iterator.length).toLowerCase()}`);
+  }
+
+  return res.join(' ');
+}
+
+// console.log(titleCase("I'm a little teA pOt"));
+
+// Basic Algorithm Scripting: Slice and Splice
+function frankenSplice(arr1, arr2, n) {
+  const newArr2 = arr2.slice();
+
+  arr2 = [...newArr2.slice(0, n), ...arr1, ...newArr2.slice(n)];
+
+  return arr2;
+}
+
+// console.log(frankenSplice(['claw', 'tentacle'], ['head', 'shoulders', 'knees', 'toes'], 2));
+
+// Basic Algorithm Scripting: Falsy Bouncer
+
+// sol 1
+
+function bouncer(arr) {
+  const newArr = [];
+
+  for (const iterator of arr) {
+    if (!!iterator) {
+      newArr.push(iterator);
+    }
+  }
+
+  return newArr;
+}
+
+// sol 2
+
+function bouncer(arr) {
+  const newArr = [...arr].filter((el) => !!el);
+
+  return newArr;
+}
+
+// console.log(bouncer([7, 'ate', '', false, 9, true, 10]));
