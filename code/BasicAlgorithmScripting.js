@@ -214,3 +214,68 @@ function bouncer(arr) {
 }
 
 // console.log(bouncer([7, 'ate', '', false, 9, true, 10]));
+
+function getIndexToIns(arr, num) {
+  if (!arr.length) {
+    return 0;
+  }
+
+  // extra step
+  // idx = arr.filter((el) => el < num) && arr.length;
+
+  // Bubble sort
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j - 1] > arr[j]) {
+        [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+      }
+    }
+  }
+
+  for (const el in arr) {
+    if (arr[el] >= num) return +el;
+  }
+
+  return arr.length;
+}
+
+// sol 2
+function getIndexToIns(arr, num) {
+  const index = arr.sort((curr, next) => curr - next).findIndex((curNum) => curNum >= num);
+  return index === -1 ? arr.length : index;
+}
+
+// sol 3
+function getIndexToIns(arr, num) {
+  return arr.filter((val) => num > val).length;
+}
+
+// console.log(getIndexToIns([2, 5, 15], 13));
+
+function mutation(arr) {
+  const test = arr[1].toLowerCase();
+  const target = arr[0].toLowerCase();
+
+  for (const i of test) {
+    if (target.indexOf(i) < 0) return false;
+  }
+  return true;
+}
+
+// console.log(mutation(['Mary', 'Aarmy']));
+
+// console.log(mutation(['floor', 'for']));
+
+function chunkArrayInGroups(arr, size) {
+  const newArr = [];
+
+  for (let i = 0; i < arr.length; i += size) {
+    let copy = arr.slice(i, i + size);
+
+    newArr.push(copy);
+  }
+
+  return newArr;
+}
+
+console.log(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2));
