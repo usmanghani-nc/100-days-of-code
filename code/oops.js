@@ -25,3 +25,35 @@ function Dog(name, color) {
 }
 
 const terrier = new Dog('doggie', 'blue');
+
+// Object Oriented Programming: Verify an Object's Constructor with instanceof
+
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+const myHouse = new House(4);
+
+myHouse instanceof House;
+
+// Object Oriented Programming: Understand Own Properties
+
+const onProps = [];
+
+for (const key in Dog) {
+  if (Dog.hasOwnProperty(key)) {
+    onProps.push(key);
+  }
+}
+
+// Object Oriented Programming: Use Prototype Properties to Reduce Duplicate Code
+
+Dog.prototype.age = 33;
+
+for (const props in beagle) {
+  if (beagle.hasOwnProperty(props)) {
+    ownProps.push(props);
+  } else {
+    prototypeProps.push(props);
+  }
+}
