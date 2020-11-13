@@ -1,10 +1,10 @@
-console.log('Running');
+console.log("Running");
 
 let dog = {
-  name: 'pitty',
+  name: "pitty",
   numLegs: 4,
   sayLegs: function () {
-    return 'This dog has ' + this.numLegs + ' legs.';
+    return "This dog has " + this.numLegs + " legs.";
   },
 };
 
@@ -24,7 +24,7 @@ function Dog(name, color) {
   this.numLegs = 4;
 }
 
-const terrier = new Dog('doggie', 'blue');
+const terrier = new Dog("doggie", "blue");
 
 // Object Oriented Programming: Verify an Object's Constructor with instanceof
 
@@ -57,3 +57,66 @@ for (const props in beagle) {
     prototypeProps.push(props);
   }
 }
+
+// Object Oriented Programming: Understand the Constructor Property
+
+function joinDogFraternity(candidate) {
+  if (candidate.constructor === Dog) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Object Oriented Programming: Change the Prototype to a New Object
+// Object Oriented Programming: Remember to Set the Constructor Property when Changing the Prototype
+
+Dog.prototype = {
+  constructor: Dog,
+  numLegs: 6,
+  eat: function () {
+    console.log("om om");
+  },
+  describe: function () {
+    console.log("dog name is" + this.name);
+  },
+};
+
+// Object Oriented Programming: Understand Where an Object’s Prototype Comes From
+// Object Oriented Programming: Understand the Prototype ChainPassed
+
+const beagle = new Dog("pup2", "coral");
+Dog.prototype.isPrototypeOf(beagle);
+Object.prototype.isPrototypeOf(Dog.prototype);
+
+// Object Oriented Programming: Use Inheritance So You Don't Repeat Yourself
+// Object Oriented Programming: Inherit Behaviors from a Supertype
+// Object Oriented Programming: Set the Child's Prototype to an Instance of the Parent
+
+function Cat(name) {
+  this.name = name;
+}
+
+Cat.prototype = {
+  constructor: Cat,
+};
+
+function Bear(name) {
+  this.name = name;
+}
+
+Bear.prototype = {
+  constructor: Bear,
+};
+
+function Animal() {}
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function () {
+    console.log("nom nom nom");
+  },
+};
+
+const duck = Object.create(Animal.prototype); // Change this line
+const beagle = Object.create(Animal.prototype); // Change this line
