@@ -1,10 +1,10 @@
-console.log("Running");
+console.log('Running');
 
 let dog = {
-  name: "pitty",
+  name: 'pitty',
   numLegs: 4,
   sayLegs: function () {
-    return "This dog has " + this.numLegs + " legs.";
+    return 'This dog has ' + this.numLegs + ' legs.';
   },
 };
 
@@ -24,7 +24,7 @@ function Dog(name, color) {
   this.numLegs = 4;
 }
 
-const terrier = new Dog("doggie", "blue");
+const terrier = new Dog('doggie', 'blue');
 
 // Object Oriented Programming: Verify an Object's Constructor with instanceof
 
@@ -75,17 +75,17 @@ Dog.prototype = {
   constructor: Dog,
   numLegs: 6,
   eat: function () {
-    console.log("om om");
+    console.log('om om');
   },
   describe: function () {
-    console.log("dog name is" + this.name);
+    console.log('dog name is' + this.name);
   },
 };
 
 // Object Oriented Programming: Understand Where an Object’s Prototype Comes From
 // Object Oriented Programming: Understand the Prototype ChainPassed
 
-const beagle = new Dog("pup2", "coral");
+const beagle = new Dog('pup2', 'coral');
 Dog.prototype.isPrototypeOf(beagle);
 Object.prototype.isPrototypeOf(Dog.prototype);
 
@@ -114,9 +114,68 @@ function Animal() {}
 Animal.prototype = {
   constructor: Animal,
   eat: function () {
-    console.log("nom nom nom");
+    console.log('nom nom nom');
   },
 };
 
-const duck = Object.create(Animal.prototype); // Change this line
-const beagle = Object.create(Animal.prototype); // Change this line
+const duck = Object.create(Animal.prototype);
+const beagle = Object.create(Animal.prototype);
+
+// Object Oriented Programming: Reset an Inherited Constructor Property
+// Object Oriented Programming: Add Methods After Inheritance
+
+Cat.prototype.constructor = Cat;
+
+// Object Oriented Programming: Override Inherited Methods
+// Object Oriented Programming: Use a Mixin to Add Common Behavior Between Unrelated Objects
+
+let bird = {
+  name: 'Donald',
+  numLegs: 2,
+};
+
+let boat = {
+  name: 'Warrior',
+  type: 'race-boat',
+};
+
+// Only change code below this line
+const glideMixin = function (obj) {
+  obj.glide = function () {
+    console.log('Flying, wooosh!');
+  };
+};
+
+glideMixin(bird);
+glideMixin(boat);
+
+// Object Oriented Programming: Use Closure to Protect Properties Within an Object from Being Modified Externally
+function Bird() {
+  let weight = 15;
+
+  this.getWeight = function () {
+    return weight;
+  };
+}
+
+// Object Oriented Programming: Understand the Immediately Invoked Function Expression (IIFE)
+(function () {
+  console.log('A cozy nest is ready');
+})();
+
+// Object Oriented Programming: Use an IIFE to Create a Module
+
+const funModule = (function () {
+  return {
+    isCuteMixin: function (obj) {
+      obj.isCute = function () {
+        return true;
+      };
+    },
+    singMixin: function (obj) {
+      obj.sing = function () {
+        console.log('Singing to an awesome tune');
+      };
+    },
+  };
+})();
