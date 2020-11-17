@@ -60,3 +60,15 @@ function incrementer(arg) {
 }
 
 // Functional Programming: Pass Arguments to Avoid External Dependence in a Function
+
+// Functional Programming: Use the map Method to Extract Data from an Array
+
+// Functional Programming: Use the map Method to Extract Data from an Array
+
+// var ratings = watchList.map((el, idx) => {
+//   return {
+//     title: el.Title,
+//     rating: el.imdbRating,
+//   };
+
+// Functional Programming: Implement map on a Prototype
