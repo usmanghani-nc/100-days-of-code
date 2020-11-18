@@ -73,60 +73,85 @@
 
 // Functional Programming: Implement map on a Prototype
 
-var s = [23, 65, 98, 5];
+// var s = [23, 65, 98, 5];
 
-Array.prototype.myMap = function (callback) {
-  var newArray = [];
+// Array.prototype.myMap = function (callback) {
+//   var newArray = [];
 
-  var items = this;
+//   var items = this;
 
-  for (const item of items) {
-    newArray.push(callback(item));
-  }
+//   for (const item of items) {
+//     newArray.push(callback(item));
+//   }
 
-  return newArray;
-};
+//   return newArray;
+// };
 
-var new_s = s.myMap(function (item) {
-  return item * 2;
-});
+// var new_s = s.myMap(function (item) {
+//   return item * 2;
+// });
 
-console.log(new_s);
+// console.log(new_s);
 
-console.log(Array.prototype, 'dad ?');
+// console.log(Array.prototype, 'dad ?');
 
 // Functional Programming: Use the filter Method to Extract Data from an Array
 
-var newArr = watchList.map((el, idx) => {
-  return {
-    title: el.Title,
-    rating: el.imdbRating,
-  };
-});
+// var newArr = watchList.map((el, idx) => {
+//   return {
+//     title: el.Title,
+//     rating: el.imdbRating,
+//   };
+// });
 
-var filteredList = newArr.filter((el, idx) => el.rating >= 8.0);
+// var filteredList = newArr.filter((el, idx) => el.rating >= 8.0);
 
-console.log(filteredList);
+// console.log(filteredList);
 
 // The global variable
-var s = [23, 65, 98, 5];
+// var s = [23, 65, 98, 5];
 
-Array.prototype.myFilter = function (callback) {
+// Array.prototype.myFilter = function (callback) {
+//   // Only change code below this line
+//   var newArray = [];
+
+//   var items = this;
+
+//   for (const item of items) {
+//     if (callback(item)) {
+//       newArray.push(item);
+//     }
+//   }
+
+//   // Only change code above this line
+//   return newArray;
+// };
+
+// var new_s = s.myFilter(function (item) {
+//   return item % 2 === 1;
+// });
+
+// console.log(new_s, 'filter');
+
+// Functional Programming: Return Part of an Array Using the slice Method
+
+function sliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
-  var newArray = [];
 
-  var items = this;
-
-  for (const item of items) {
-    newArray.push(callback(item));
-  }
-
+  return anim.slice(beginSlice, endSlice);
   // Only change code above this line
-  return newArray;
-};
+}
+var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
+sliceArray(inputAnim, 1, 3);
 
-var new_s = s.myFilter(function (item) {
-  return item % 2 === 1;
-});
+// Functional Programming: Combine Two Arrays Using the concat Method
 
-console.log(new_s, 'filter');
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+
+  return original.concat(attach);
+  // Only change code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
