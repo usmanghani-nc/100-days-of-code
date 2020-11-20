@@ -296,21 +296,75 @@ const watchList = [
   },
 ];
 
-function getRating(watchList) {
+// function getRating(watchList) {
+//   // Only change code below this line
+//   let count = 0;
+
+//   var averageRating =
+//     watchList.reduce((sum, movie) => {
+//       if (movie.Director == 'Christopher Nolan') {
+//         count += 1;
+//         return sum + parseFloat(movie.imdbRating);
+//       }
+//       return sum;
+//     }, 0) / count;
+
+//   // Only change code above this line
+//   return averageRating;
+// }
+
+// console.log(getRating(watchList));
+
+// const squareList = (arr) => {
+//   // Only change code below this line
+
+//   const posNums = arr.filter((n) => n > 0 && Number.isInteger(n));
+
+//   const res = posNums.map((num) => {
+//     return (num *= num);
+//   });
+
+//   return res;
+//   // Only change code above this line
+// };
+
+// sol 2
+
+const squareList = (arr) => {
   // Only change code below this line
-  let count = 0;
+  const res = arr.reduce((curr, num) => {
+    return Number.isInteger(num) && num > 0 ? curr.concat(num * num) : curr;
+  }, []);
 
-  var averageRating =
-    watchList.reduce((sum, movie) => {
-      if (movie.Director == 'Christopher Nolan') {
-        count += 1;
-        return sum + parseFloat(movie.imdbRating);
-      }
-      return sum;
-    }, 0) / count;
-
+  return res;
   // Only change code above this line
-  return averageRating;
+};
+
+const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
+// console.log(squaredIntegers);
+
+// Functional Programming: Sort an Array Alphabetically using the sort Method
+
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+  return arr.sort((a, b) => {
+    return a < b && -1;
+  });
+  // Only change code above this line
 }
 
-console.log(getRating(watchList));
+// console.log(alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']));
+
+// Functional Programming: Return a Sorted Array Without Changing the Original Array
+
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  const newArr = [...arr].sort((a, b) => {
+    return a - b;
+  });
+
+  return newArr;
+  // Only change code above this line
+}
+console.log(nonMutatingSort(globalArray));
