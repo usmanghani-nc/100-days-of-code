@@ -278,4 +278,6 @@ function chunkArrayInGroups(arr, size) {
   return newArr;
 }
 
+// [ [3,4], [1, 2] ]
+
 console.log(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2));

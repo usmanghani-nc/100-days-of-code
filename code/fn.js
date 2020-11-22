@@ -315,18 +315,18 @@ const watchList = [
 
 // console.log(getRating(watchList));
 
-// const squareList = (arr) => {
-//   // Only change code below this line
+const squareList = (arr) => {
+  // Only change code below this line
 
-//   const posNums = arr.filter((n) => n > 0 && Number.isInteger(n));
+  const posNums = arr.filter((n) => n > 0 && Number.isInteger(n));
 
-//   const res = posNums.map((num) => {
-//     return (num *= num);
-//   });
+  const res = posNums.map((num) => {
+    return (num *= num);
+  });
 
-//   return res;
-//   // Only change code above this line
-// };
+  return res;
+  // Only change code above this line
+};
 
 // sol 2
 
