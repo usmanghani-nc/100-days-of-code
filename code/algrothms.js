@@ -23,3 +23,21 @@ console.log('run');
 // }
 
 // console.log(sumAll([10, 20]));
+
+function diffArray(arr1, arr2) {
+  const newArr = [...arr1, ...arr2];
+
+  return newArr.filter((num) => !arr1.includes(num) || !arr2.includes(num));
+}
+
+// console.log(diffArray([1, 3, 5, 2], [1, 5, 3, 4, 2]));
+
+// Intermediate Algorithm Scripting: Seek and Destroy
+
+function destroyer(arr) {
+  const [array, ...arr2] = [...arguments];
+
+  return array.filter((el) => !arr2.includes(el));
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
