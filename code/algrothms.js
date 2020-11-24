@@ -40,4 +40,27 @@ function destroyer(arr) {
   return array.filter((el) => !arr2.includes(el));
 }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+function whatIsInAName(collection, source) {
+  var srcKeys = Object.keys(source);
+
+  return collection.filter(function (obj) {
+    return srcKeys.every(function (key) {
+      return obj.hasOwnProperty(key) && obj[key] === source[key];
+    });
+  });
+}
+
+// console.log(whatIsInAName([{ apple: 1 }, { apple: 1 }, { apple: 1, bat: 2 }], { apple: 1 }));
+
+// Intermediate Algorithm Scripting: Spinal Tap Case
+
+function spinalCase(str) {
+  return str
+    .split(/\s|_|(?=[A-Z])/)
+    .join('-')
+    .toLowerCase();
+}
+
+console.log(spinalCase('This Is Spinal Tap'));
