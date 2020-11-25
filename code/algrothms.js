@@ -63,4 +63,59 @@ function spinalCase(str) {
     .toLowerCase();
 }
 
-console.log(spinalCase('This Is Spinal Tap'));
+// console.log(spinalCase('This Is Spinal Tap'));
+
+// Intermediate Algorithm Scripting: Pig Latin
+
+function translatePigLatin(str) {
+  const consonantRegex = /^[^aeiou]+/;
+
+  // if consanonet will return on of these words a,e,i,o,u
+
+  const myConsonants = str.match(consonantRegex);
+
+  console.log(str.replace(consonantRegex, '').concat(myConsonants).concat('ay'), '???');
+
+  return myConsonants !== null
+    ? str.replace(consonantRegex, '').concat(myConsonants).concat('ay')
+    : str.concat('way');
+}
+
+// console.log(translatePigLatin('consonant'));
+
+// Intermediate Algorithm Scripting: Search and Replace
+function myReplace(str, before, after) {
+  const index = str.indexOf(before);
+
+  // chack case
+  if (str[index] === str[index].toUpperCase()) {
+    // change after before replacing
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  } else {
+    // if no upper case
+    after = after.charAt(0).toLowerCase() + after.slice(1);
+  }
+
+  return str.replace(before, after);
+}
+
+// console.log(myReplace('A quick brown fox jumped over the lazy dog', 'jumped', 'leaped'));
+
+// Intermediate Algorithm Scripting: DNA Pairing
+
+function pairElement(str) {
+  //create object for pair lookup//create object for pair lookup
+
+  const pairs = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+
+  const char = str.split('');
+
+  return char.map((x) => [x, pairs[x]]);
+}
+
+console.log(pairElement('GCG'));
