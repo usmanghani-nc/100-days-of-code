@@ -118,4 +118,110 @@ function pairElement(str) {
   return char.map((x) => [x, pairs[x]]);
 }
 
-console.log(pairElement('GCG'));
+// console.log(pairElement('GCG'));
+
+// Intermediate Algorithm Scripting: Missing letters
+
+// function fearNotLetter(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     // finde numaric value of string.
+//     const code = str.charCodeAt(i);
+
+//     // code start at 0 so we get first word num val
+//     // then we compare (codeNum !== strNum + i)
+
+//     if (code !== str.charCodeAt(0) + i) {
+//       return String.fromCharCode(code - 1);
+//     }
+//   }
+
+//   return undefined;
+// }
+
+// sol 2
+
+function fearNotLetter(str) {
+  let missing;
+  let compare = str.charCodeAt(0); // return first inDex num;
+
+  str.split('').map((letter, idx) => {
+    if (str.charCodeAt(idx) === compare) {
+      ++compare;
+    } else {
+      missing = String.fromCharCode(compare);
+    }
+  });
+
+  return missing;
+}
+
+// console.log(fearNotLetter('abce'));
+
+// Intermediate Algorithm Scripting: Sorted Union
+
+function uniteUnique(...arr) {
+  const flatArray = [].concat(...arr);
+
+  // create a Set which clears any duplicates since it's a regular set and not a multiset
+  return [...new Set(flatArray)];
+}
+
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+function convertHTML(str) {
+  const htmlEntities = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&apos;',
+  };
+
+  return str
+    .split('')
+    .map((entity) => htmlEntities[entity] || entity)
+    .join('');
+}
+
+// console.log(convertHTML('Dolce & Gabbana'));
+
+// Intermediate Algorithm Scripting: Sum All Odd Fibonacci Numbers
+
+function sumFibs(num) {
+  if (num <= 0) return 0;
+
+  const arrFib = [1, 1];
+  let nextFib = 0;
+
+  while ((nextFib = arrFib[0] + arrFib[1]) <= num) {
+    arrFib.unshift(nextFib);
+  }
+
+  return arrFib.filter((num) => num % 2 != 0).reduce((a, b) => a + b);
+}
+// console.log(sumFibs(4));
+
+// Intermediate Algorithm Scripting: Sum All Primes
+
+function sumPrimes(num) {
+  if (num == 0) return 0;
+
+  function isPrime(number) {
+    for (let i = 2; i <= number; i++) {
+      if (number % i === 0 && number != i) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  if (!isPrime(num)) {
+    return sumPrimes(num - 1);
+  }
+
+  if (isPrime(num)) {
+    return num + sumPrimes(num - 1);
+  }
+}
+
+console.log(sumPrimes(10));
