@@ -224,4 +224,132 @@ function sumPrimes(num) {
   }
 }
 
-console.log(sumPrimes(10));
+// console.log(sumPrimes(10));
+
+// Intermediate Algorithm Scripting: Smallest Common Multiple
+function smallestCommons(arr) {
+  const min = Math.min(...arr); // 1
+  const max = Math.max(...arr); // 2
+
+  let sol = max; // 2
+
+  // start from max - 1 => 5 - 1 = 4;
+  for (let i = max - 1; i >= min; i--) {
+    if (sol % i) {
+      sol += max;
+      i = max;
+    }
+  }
+
+  return sol;
+}
+// console.log(smallestCommons([1, 5]));
+
+function dropElements(arr, func) {
+  return arr.slice(arr.findIndex(func) >= 0 ? arr.findIndex(func) : arr.length);
+}
+
+// console.log(
+//   dropElements([0, 1, 0, 1], function (n) {
+//     return n === 1;
+//   }),
+// );
+
+function steamrollArray(arr) {
+  return arr.reduce((acc, val) => {
+    return acc.concat(Array.isArray(val) ? steamrollArray(val) : val);
+  }, []);
+}
+
+// console.log(steamrollArray([1, [2], [3, [[4]]]]));
+
+function binaryAgent(str) {
+  return str
+    .split(' ')
+    .map((el) => {
+      return String.fromCharCode(parseInt(el, 2));
+    })
+    .join('');
+}
+
+// console.log(
+//   binaryAgent(
+//     '01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111',
+//   ),
+// );
+
+// Intermediate Algorithm Scripting: Everything Be True
+
+function truthCheck(collection, pre) {
+  return collection.every((obj) => obj.sex === obj[pre]);
+}
+
+// console.log(
+//   truthCheck(
+//     [
+//       { user: 'Tinky-Winky', sex: 'male' },
+//       { user: 'Dipsy', sex: 'male' },
+//       { user: 'Laa-Laa', sex: 'female' },
+//       { user: 'Po', sex: 'female' },
+//     ],
+//     'sex',
+//   ),
+// );
+
+// Intermediate Algorithm Scripting: Arguments Optional
+
+function addTogether(first, second) {
+  if (typeof first !== 'number') return undefined;
+
+  const sum = (second) => (typeof second === 'number' ? first + second : undefined);
+  return typeof second === 'undefined' ? (second) => sum(second) : sum(second);
+}
+
+// console.log(addTogether(2, 3));
+
+// Intermediate Algorithm Scripting: Make a Person
+
+var Person = function (firstAndLast) {
+  var fullName = firstAndLast;
+
+  this.getFirstName = function () {
+    return fullName.split(' ')[0];
+  };
+
+  this.getLastName = function () {
+    return fullName.split(' ')[1];
+  };
+
+  this.getFullName = function () {
+    return fullName;
+  };
+
+  this.setFirstName = function (name) {
+    fullName = name + ' ' + fullName.split(' ')[1];
+  };
+
+  this.setLastName = function (name) {
+    fullName = fullName.split(' ')[0] + ' ' + name;
+  };
+
+  this.setFullName = function (name) {
+    fullName = name;
+  };
+};
+
+var bob = new Person('Bob Ross');
+bob.getFullName();
+
+// Intermediate Algorithm Scripting: Map the Debris
+
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  return arr.map(({ name, avgAlt }) => {
+    const earth = earthRadius + avgAlt;
+    const orbitalPeriod = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earth, 3) / GM));
+    return { name, orbitalPeriod };
+  });
+}
+
+orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]);
