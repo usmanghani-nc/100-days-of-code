@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h3 class="text-primary text-center">jQuery Playground</h3>
+      <div class="row">
+        <div class="col-xs-6">
+          <h4>#left-well</h4>
+          <div class="well" id="left-well">
+            <button class="btn btn-default target" id="target1">#target1</button>
+            <button class="btn btn-default target" id="target2">#target2</button>
+            <button class="btn btn-default target" id="target3">#target3</button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <h4>#right-well</h4>
+          <div class="well" id="right-well">
+            <button class="btn btn-default target" id="target4">#target4</button>
+            <button class="btn btn-default target" id="target5">#target5</button>
+            <button class="btn btn-default target" id="target6">#target6</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery: Target Elements by Class Using jQuery
+      // jQuery: Target Elements by id Using jQuery
+      // jQuery: Delete Your jQuery Functions
+      $(document).ready(function () {
+        $('button').addClass('animated bounce');
+        $('.well').addClass('animated shake');
+        $('#target3').addClass('animated fadeOut');
+      });
+    </script>
+  </body>
+</html>
