@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        font-size: 20px;
+      }
+      .responsive-img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Responsive Web Design Principles: Use a Retina Image for Higher Resolution Displays */
+      img {
+        height: 100px;
+        width: 100px;
+      }
+
+      /* Responsive Web Design Principles: Make Typography Responsive */
+
+      h2 {
+        width: 80vw;
+      }
+      p {
+        width: 75vmin;
+      }
+      @media (max-height: 800px) {
+        p {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean
+      erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh.
+      Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl.
+      Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+      consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+    </p>
+
+    <img
+      class="responsive-img"
+      src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+      alt="freeCodeCamp stickers set"
+    />
+    <img
+      src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+      alt="freeCodeCamp stickers set"
+    />
+  </body>
+</html>
