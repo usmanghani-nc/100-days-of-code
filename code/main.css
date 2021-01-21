@@ -1,0 +1,140 @@
+.header {
+  text-align: center; }
+
+.blog-post,
+h2 {
+  color: red; }
+
+.blog-post h1 {
+  text-align: center;
+  color: blue; }
+
+.blog-post p {
+  font-size: 20px; }
+
+#awesome {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px; }
+
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border: 3px solid black; }
+
+.blue-bg {
+  background-color: blue; }
+
+.black-bg {
+  background-color: black; }
+
+.red-bg {
+  background-color: red; }
+
+.text-1 {
+  font-size: 15px; }
+
+.text-2 {
+  font-size: 30px; }
+
+.text-3 {
+  font-size: 45px; }
+
+.text-4 {
+  font-size: 60px; }
+
+.text-5 {
+  font-size: 75px; }
+
+.text-6 {
+  font-size: 90px; }
+
+.text-7 {
+  font-size: 105px; }
+
+.text-8 {
+  font-size: 120px; }
+
+.text-9 {
+  font-size: 135px; }
+
+.text-10 {
+  font-size: 150px; }
+
+.col-1 {
+  width: 8.33333%;
+  padding: 10px; }
+
+.col-2 {
+  width: 16.66667%;
+  padding: 10px; }
+
+.col-3 {
+  width: 25%;
+  padding: 10px; }
+
+.col-4 {
+  width: 33.33333%;
+  padding: 10px; }
+
+.col-5 {
+  width: 41.66667%;
+  padding: 10px; }
+
+.col-6 {
+  width: 50%;
+  padding: 10px; }
+
+.col-7 {
+  width: 58.33333%;
+  padding: 10px; }
+
+.col-8 {
+  width: 66.66667%;
+  padding: 10px; }
+
+.col-9 {
+  width: 75%;
+  padding: 10px; }
+
+.col-10 {
+  width: 83.33333%;
+  padding: 10px; }
+
+.col-11 {
+  width: 91.66667%;
+  padding: 10px; }
+
+.col-12 {
+  width: 100%;
+  padding: 10px; }
+
+.text-1 {
+  font-size: 15px; }
+
+.text-2 {
+  font-size: 30px; }
+
+.text-3 {
+  font-size: 45px; }
+
+.text-4 {
+  font-size: 60px; }
+
+.text-5 {
+  font-size: 75px; }
+
+.text-6 {
+  font-size: 90px; }
+
+.flex {
+  display: flex; }
+
+div {
+  height: 200px;
+  width: 200px; }
